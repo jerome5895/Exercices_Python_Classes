@@ -1,31 +1,40 @@
 Classes:
 
 thred
+état :
 title
 time_posted
 posts
+comportement :
 display()
 add_post(post)
 
 
 
 post                -           file_post
+état :                          état :
 content                         file
 user
 time_posted
-display
+comportement :                  comportement :
+display()
+
 
 file                -           image
+état :                          état :
 name
 size
+comportement :                  comportement :
 display()
 
 
 
 user                -           moderator
+état :                          état :
 username                        edit(post, content)
-password                        delete(thread, post)
-sign_in()               
+password
+comportement :                  comportement :
+sign_in()                       delete(thread, post)
 log_in()                
 log_out()
 post(thread, content)
