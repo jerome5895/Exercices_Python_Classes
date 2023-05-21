@@ -1,0 +1,32 @@
+Classes:
+
+thred
+title
+time_posted
+posts
+display()
+add_post(post)
+
+
+
+post                -           file_post
+content                         file
+user
+time_posted
+display
+
+file                -           image
+name
+size
+display()
+
+
+
+user                -           moderator
+username                        edit(post, content)
+password                        delete(thread, post)
+sign_in()               
+log_in()                
+log_out()
+post(thread, content)
+make_thread(title, content)
