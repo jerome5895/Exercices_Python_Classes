@@ -1,40 +1,88 @@
-class ForumCake:
-
-    def __init__(self):
-        self.discussion_threads = []
-
-    def sign_up(self):
-        pass
+class Thread:
     
-    def sign_in(self):
-        pass
-    
-    def logout(self):
-        pass
-
-    def add_thread(self, thread):
-        self.discussion_threads.append(thread)
-
-
-class Thread(ForumCake):
-    
-    def __init__(self, title, date):
+    def __init__(self, title, time_posted, posts):
         self.title = title
-        self.date = date
+        self.time_posted = time_posted
+        self.posts = posts
         self.posts = []
 
+    def display(self):
+        pass
+    
     def add_post(self, post):
         self.posts.append(post)
 
 
-class Post(Thread):
 
-    def __init__(self, text, user, date):
-        self.text = text
+class Post:
+
+    def __init__(self, content, user, time_posted):
+        self.content = content
         self.user = user
-        self.date = date
+        self.time_posted = time_posted
         self.files = []
 
-    def add_file(self, file):
-        self.files.append(file)
+    def display(self):
+        pass
+
+
+
+class File_post(Post):
+
+    def __init__(self, file):
+        self.file = file
+
+
+
+
+class File:
+
+    def __init__(self, name, size):
+        self.name = name
+        self.size = size
+
+    def display(self):
+        pass
+
+
+
+class Image(File):
+    pass
+
+
+
+class User:
+
+    def __init__(self, username, password):
+        self.username = username
+        self.password = password
+
+    def sign_in(self):
+        pass
+
+    def login(self):
+        pass
+
+    def logout(self):
+        pass
+
+    def post(self, thread, content):
+        pass
+
+    def make_thread(title, content):
+        pass
+
+
+
+class Moderator(User):
+
+    def __init__(self):
+        pass
+
+    def edit(self, post, content):
+        pass
+
+    def delete(self, thread, post):
+        pass
+
  
