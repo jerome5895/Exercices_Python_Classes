@@ -1,7 +1,7 @@
-# Définit les classes exercice01 Openclassrooms
+from abc import ABC
 
 
-class File:
+class File(ABC):
     """Fichier."""
     def __init__(self, name, size):
         """Initialise le nom et la taille."""
@@ -10,13 +10,15 @@ class File:
 
     def display(self):
         """Affiche le fichier."""
-        print(f"Fichier '{self.name}'.")
+        pass
 
 
 
 class Image(File):
     """Fichier image."""
-    pass
+    
+    def display(self):
+        print(f"Fichier '{self.name}'.")
 
 
 
